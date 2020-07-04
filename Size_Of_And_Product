@@ -1,0 +1,25 @@
+//Assignment 1: Finding size of different variables
+#include<iostream>
+using namespace std;
+int main()
+{
+	cout<<"Size of char: "<<sizeof(char)<<" byte";
+	cout<<"\nSize of int: "<<sizeof(int)<<" bytes";
+	cout<<"\nSize of float: "<<sizeof(float)<<" bytes";
+	cout<<"\nSize of double: "<<sizeof(double)<<" bytes";
+
+}
+--------------------------------------------------------------------
+//Assignment 2: Finding product of two user entered numbers
+#include<iostream>
+using namespace std;
+int main()
+{
+	cout<<"Enter two numbers:";
+	float a,b,product;
+	cin>>a>>b;
+	product=a*b;
+	cout<<"Product="<<product;
+
+}
+
