@@ -1,0 +1,58 @@
+//WAP to check if a number can be expressed as the sum of two prime numbers
+#include<iostream>
+using namespace std;
+
+
+int main()
+{
+	int n,prime[100];
+	cout<<"Enter an integer number:\t";
+	cin>>n;
+	cout<<"You entered:"<<n<<endl;
+
+	//creating a list of prime numbers upto n
+	int k=0;
+	int len_prime=0;
+	for(int i=2;i<n;i++)  //starting primes from 2
+	{   int flag=0;      //use of flag and placement of blocks is imp!!!
+		for(int j=2;j<i;j++)
+		{
+			if(i==2)  //first entry of prime[]
+				{
+					prime[k]=i;
+					k++;
+					len_prime++;
+				}
+			else  //will determine if i is prime
+			{
+				if(i%j==0) //not prime
+				{
+				  flag=1;
+				  break;
+				}
+			}
+           
+		}
+		if(flag==0) //prime coz flag value not changed
+		{
+	    	prime[k]=i;
+			k++;
+			len_prime++;
+		}
+	}
+	
+	//Checking possibilities
+	int x,y;
+	for(int a=0;a<len_prime;a++)
+	{
+		x=prime[a];
+		y=n-x;
+		for(int b=a;b<len_prime;b++)
+		{
+			if(y==prime[b])
+				{
+				cout<<n<<" = "<<x<<" + "<<y<<endl; 
+				} 
+	}
+}
+}
